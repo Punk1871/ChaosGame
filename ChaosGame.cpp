@@ -16,7 +16,7 @@ int main()
 {
     // constant variables
     const string name_of_the_game = "Chaos Game";
-    const string font_name = "CloisterBlack.ttf";
+    const string font_name = "arial.ttf";
 
     // Create a video mode object
     VideoMode vm(1920, 1080);
