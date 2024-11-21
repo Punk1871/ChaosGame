@@ -170,7 +170,7 @@ int main()
         */
         window.clear();
         window.draw(text);
-        srand(0); // seed is set so rainbow dots are the same, without seed shimmers,
+        srand(0); // seed is set so rainbow dots are the same.
         for (int i = 0; i < numPoints; i++) //draw all dots
         {
             RectangleShape rect(Vector2f(1, 1));
