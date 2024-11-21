@@ -42,6 +42,7 @@ int main()
 
     // Setting text element
     Text text;
+    text.setCharacterSize(24);
     text.setString("Left Click 3 or more points to form a shape.");
     text.setFont(font);
     text.setCharacterSize(100);
