@@ -41,7 +41,8 @@ int main()
     }
 
     // Setting text element
-    Text text("Left Click 3 or more points to form a shape.");
+    Text text;
+    text.setString("Left Click 3 or more points to form a shape.");
     text.setFont(font);
     text.setCharacterSize(100);
     text.setFillColor(sf::Color::White);
