@@ -52,7 +52,7 @@ int main()
     shape.setOutlineThickness(2);
     shape.setFillColor(Color::Transparent);
 
-
+    window.draw(text);
     while (window.isOpen())
     {
         /*
@@ -76,7 +76,7 @@ int main()
                     std::cout << "mouse x: " << event.mouseButton.x << std::endl;
                     std::cout << "mouse y: " << event.mouseButton.y << std::endl;
 
-                    if (!create) //path shuts off after right right click
+                    if (!create) //path shuts off after right click
                     {
                         vertices.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
                     }
