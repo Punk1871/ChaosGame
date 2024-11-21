@@ -121,9 +121,9 @@ int main()
         */
         int numVert = vertices.size();
         int numPoints = points.size();
-        if (vertices.size() >= 3 && !outShape) {text.setString("add more points or right-click to set shape"); window.draw(text);}
-        else if (outShape && points.size() == 0) {text.setString("left-click inside the shape to start the Chaos");window.draw(text);}
-        else if (outShape) {text.setString("  right-click to reset");window.draw(text);}
+        if (vertices.size() >= 3 && !outShape) {text.setString("add more points or right-click to set shape");}
+        else if (outShape && points.size() == 0) {text.setString("left-click inside the shape to start the Chaos");}
+        else if (outShape) {text.setString("  right-click to reset");}
 
         //create shape
         if (create && !outShape)
@@ -169,6 +169,7 @@ int main()
         ****************************************
         */
         window.clear();
+        window.draw(text);
         srand(0); // seed is set so rainbow dots are the same, without seed shimmers,
         for (int i = 0; i < numPoints; i++) //draw all dots
         {
