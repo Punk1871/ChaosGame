@@ -44,7 +44,7 @@ int main()
     text.setFont(font);
     text.setString("left-click 3+ points to form a shape");
     text.setCharacterSize(100);
-    text.setColor(sf::Color::White);
+    text.setFillColor(sf::Color::White);
 
     // Setting shape cosmetic parameters
     ConvexShape shape;
