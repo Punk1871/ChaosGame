@@ -34,17 +34,18 @@ int main()
 
     // Loading font
     Font font;
+    font.loadFromFile("arial.tff");
     if (!font.loadFromFile(font_name))
     {
         cout << "Error loading " << font_name << endl; // error...
     }
 
     // Setting text element
-    Text text;
+    Text text("Left Click 3 or more points to form a shape.");
     text.setFont(font);
-    text.setString("left-click 3+ points to form a shape");
     text.setCharacterSize(100);
     text.setFillColor(sf::Color::White);
+    window.draw(text);
 
     // Setting shape cosmetic parameters
     ConvexShape shape;
@@ -68,8 +69,7 @@ int main()
                 // Quit the game when the window is closed
                 window.close();
             }
-            window.clear();
-            window.draw(text);
+          
             if (event.type == sf::Event::MouseButtonPressed)
             {
                 if (event.mouseButton.button == sf::Mouse::Left)
@@ -97,7 +97,7 @@ int main()
                     }
                     if (outShape && vertices.size() > 1) // reset all variables
                     {
-                        text.setString("left-click 3+ points to form a shape");
+                        window.draw(text);
                         vertices.clear();
                         points.clear();
                         create = false;
@@ -119,9 +119,9 @@ int main()
         */
         int numVert = vertices.size();
         int numPoints = points.size();
-        if (vertices.size() >= 3 && !outShape) text.setString("add more points or right-click to set shape");
-        else if (outShape && points.size() == 0) text.setString("left-click inside the shape to start the Chaos");
-        else if (outShape) text.setString("  right-click to reset");
+        if (vertices.size() >= 3 && !outShape) {text.setString("add more points or right-click to set shape"); window.draw(text);}
+        else if (outShape && points.size() == 0) {text.setString("left-click inside the shape to start the Chaos");window.draw(text);}
+        else if (outShape) {text.setString("  right-click to reset");window.draw(text);}
 
         //create shape
         if (create && !outShape)
