@@ -52,7 +52,7 @@ int main()
     shape.setOutlineThickness(2);
     shape.setFillColor(Color::Transparent);
 
-    window.draw(text);
+    
     while (window.isOpen())
     {
         /*
@@ -68,6 +68,8 @@ int main()
                 // Quit the game when the window is closed
                 window.close();
             }
+            window.clear();
+            window.draw(text);
             if (event.type == sf::Event::MouseButtonPressed)
             {
                 if (event.mouseButton.button == sf::Mouse::Left)
